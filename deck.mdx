@@ -1,39 +1,41 @@
 export { default as theme } from './theme'
 
 import { Split, Horizontal, Invert } from 'mdx-deck/layouts'
+import { Image, Appear, Head } from 'mdx-deck';
 import Highlight from "./Highlight"
 import Red from './Red';
 import SplitThird from './SplitThird'
 import Color from './Color'
-
+import Splash from './Splash'
 import {hoc} from './SplitColor'
-const BS = hoc("yellow");
+import Footer from './Footer'
 
+<Head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Special+Elite|Josefin+Slab" rel="stylesheet" />
+</Head>
+
+<Splash src="./images/splash.jpg" />
 
 # Paging Dr. Static
-### Wielding types like a surgeon
+## Wielding types like a surgeon
 ---
 # Checkmate
 ---
-export default Horizontal
+export default Split
 
-- ## Bugs
-- ## Code Rot
-- ## Hungry
-
-
-- Tempermental
-- Mature
-- Third
+- # Bugs
+- # Code Rot
+- # Scary
 
 
-- Virus
-- Bloated
-- third
+- # Mature
+- # Virus
+- # Hungry
 
+```notes
+Mention DNA
+```
 
----
-### DNA
 ---
 export default SplitThird
 
@@ -70,37 +72,45 @@ export default Split
 ---
 # Static types offer a lot
 ---
-export default Split
+export default Horizontal
 
-- ### 🏋🏿‍♂️ CONFIDENCE IN CODE
-- ### 🏎 FASTER REFACTORING
-- ### 💥 NO RUNTIME ERRORS
+# Types PROMISE
+
+- ### + Confidence in code
+- ### + Faster refactoring
+- ### + No runtime erors
 
 
-- ### 📝 FEWER TEST CASES
-- ### 👓 IMPROVED READABILITY
-- ### 🛠 TOOLING SUPPORT
+- ### + Fewer test cases
+- ### + Improved reability
+- ### + Tooling support
 ---
 export default Horizontal
 
 # Types have a COST
 
-- ### 📝 Writing type definitons
-- ### 🛠 Maintaining definitons
-- ### 🦹‍♀️ Managing third party definitions 
-- ### ✒️ Editor tooling
+- ### - Writing type definitons
+- ### - Maintaining type   definitons
+- ### - Managing third party definitions 
+- ### ️ - Editor tooling
 
 
-- ### 👷‍♀️ Build process changes
-- ### 💰 Opportunity cost
-- ### ⏱ Long term risk
-- ### 👩‍👩‍👧‍👦 People
+- ### - Defensive coding
+- ### - Build process changes
+- ### - Opportunity cost
+- ### - Long term risk
+- ### - People
 ---
 # Risk
 ## Can you get out?
 ---
 # People
 ## People are always tricky
+```notes
+Have to convince people to front load effort
+Support, frustration
+There is no universe they didnt do this
+```
 ---
 ## Treat types like a 
 # SURGEON
@@ -109,11 +119,11 @@ export default Horizontal
 # benefit existing apps
 ## and while minimising harm
 ---
-export default BS
+export default SplitThird
 
 # The PROCESS
 
-- ## Where static types help?
+- ## Can static types help?
 - ## Which tool fits best?
 - ## Can we minimise costs?
 ---
@@ -122,7 +132,7 @@ export default Invert
 # Where can static types help?
 ---
 # Don't guess!
-# Be DATA-DRIVEN
+# Be _DATA DRIVEN_
 ---
 # Avoid _low hanging fruit_
 ## (And personal vendettas...) 
@@ -133,13 +143,13 @@ export default Invert
 - ### Do root cause analysis on bugs
 - ### Find patterns 
 ---
-export default Split
+export default SplitThird
 
-# Is it full of
+# Is your problem area...
 
-- ### Dynamic
-- ### Uncertainty
-- ### Assumptions
+- ## Highly dynamic?
+- ## Hard to reason about?
+- ## Filled with assumptions?
 ---
 ## Tick any boxes? You might want to apply 
 # STATIC TYPES
@@ -150,7 +160,7 @@ export default Invert
 ---
 export default Horizontal
 
-<Color color="#007ad2">TypeScript</Color>
+# TypeScript
 
 # Flow
 
@@ -161,44 +171,45 @@ export default Horizontal
 # TypeScript
 
 
+- ### + Exceptional tooling
+- ### + Great library definitions
+- ### + Largest community
 
-- ### ✅ Exceptional tooling
-- ### ✅ Great library definitions
-- ### ✅ Largest community
 
-
-- ### 🚨 Verbose
-- ### 🚨 Not type sound
-- ### 🚨 Too permissive
-- ### 🚨 Lock in
+- ### - Verbose
+- ### - Not type sound
+- ### - Too permissive
+- ### - Lock in
 
 ---
 export default Horizontal
 
 # Flow
 
-- ### ✅ Rad type inference
-- ### ✅ Type soundness
-- ### ✅ Ejection guaranteed
+- ### + Rad type inference
+- ### + Type soundness
+- ### + Ejection guaranteed
 
 
-- ### 🚨 Embarrassing tooling
-- ### 🚨 Smaller community
-- ### 🚨 Higher chance of frustration
+- ### - Embarrassing tooling
+- ### - Smaller community
+- ### - Higher chance of frustration
 
 ---
 export default Horizontal
 
 # Reason
 
-- ### ✅ Type inference like _woah_
-- ### ✅ Performanance is amazing
-- ### ✅ Complete package
+- ### + Type inference like _woah_
+- ### + Performanance is amazing
+- ### + Complete package
 
 
-- ### 🚨 Still very new
-- ### 🚨 You _will_ write bindings
-- ### 🚨 Ejection story is "OK"
+- ### - Still very new
+- ### - You _will_ write bindings
+- ### - Ejection story is "OK"
+---
+<Image src="./images/simple.gif" />
 ---
 
 export default Invert
@@ -220,20 +231,203 @@ export default SplitThird
 ---
 
 
-- # Font: Dank mono (dank.sh)
-- # Theme: Dracula
+# Font: Dank mono (_dank.sh_)
+# Theme: Dracula
 
 ---
 # Patient 1
 
-### "Doctor doctor! My form is driving me crazy!"
+## "Doctor doctor! My form is driving me crazy!"
 
 ---
 # Symptoms
 
-- Customer complaints of missing data
-- Exception cannot call "toUpperCase" on undefined
-- 500 from server on submit
+- ### Customer complaints of missing first name
+- ### Exception cannot call "toUpperCase" on undefined
+- ### 500 from server on submit
 ---
 # Hypothesis of Root Cause
 ## Side effect assumptions
+
+---
+# Let's check the code
+---
+export default SplitThird
+
+# Hunting for types!
+
+1. ### You could guess and refine
+1. ### Documentation? Alright...
+1. ### GraphQL schema? Bingo!
+---
+# Let's add those types!
+---
+export default SplitThird
+
+# The PROCESS
+
+- ## Can static types help?
+- ## Which tool fits best?
+- ## Can we minimise costs?
+---
+# Costs still high
+
+- ### Will the API change?
+- ### Who's going maintain it?
+- ### Syntax updates?
+---
+# Can we do better?
+## What about GraphQL types?
+```notes
+Weigh on graphql Typs
+```
+---
+export default Split
+
+# ReasonML PPX
+
+# Apollo CodeGen
+---
+export default SplitThird
+
+# The PROCESS
+
+- ## Can static types help?
+- ## Which tool fits best?
+- ## Can we minimise costs?
+---
+# Patient 2
+
+## "Doctor doctor! The bug trickle won't stop!"
+---
+# Symptoms
+
+- ### Consistently occuring unrelated bugs
+- ### All code is unit tested code
+- ### New bug new count not decreasing
+---
+export default SplitThird
+
+# Is your problem area...
+
+- ###  Highly dynamic?
+- ###  Hard to reason about
+- ###  Filled with assumptions?
+---
+ # Let's examine the code...
+---
+# Hypothesis of Root Cause
+## Taking type shortcuts in unit tests
+---
+# Patient 3
+
+## "Doctor doctor! My form hurts too!"
+---
+# Symptoms
+- ### Customer complaints of missing data
+- ### Errors on submitting
+---
+> "Ah ha, another one!"
+
+– A worryingly keen amateur
+---
+# How to be data driven
+- ### Have centralised logging
+- ### Keep an eye on metrics
+- ### Do root cause analysis on bugs
+- ### Find patterns 
+---
+# Let's check the logs
+
+<Appear>
+    <h1> Timeouts! </h1>
+</Appear>
+---
+# Can types help?
+
+<Appear>
+    <h1> No. </h1>
+</Appear>
+---
+# Patient 4
+
+## "Doctor doctor! Your corporate purchasing app is unreliable!"
+---
+# UNACCEPTABLE
+```notes
+The backbone of every shadowy organisation is its purchasing and expensing process, just ask GRU
+```
+---
+# Symptoms
+
+- ### Can't add items to wishlist reliably
+- ### Bypass codes aren't working
+- ### Crashes when ArchMinion uses it
+
+---
+export default Horizontal 
+
+# Asgard purchasing
+
+
+- ### There is a SHOPPING LIST and a WISH LIST
+- ### Doctors can add anything to the SHOPPING LIST
+- ### ~~Minions~~ staff can add anything to the WISH LIST
+
+
+- ### Up to three things can be on the WISH LIST
+- ### A allows stadd any additon to WISH LIST 
+- ### If item is "cake", it gets added without checks
+---
+# Types don't just catch mistakes
+# Good types can _offer clarity_
+---
+export default Horizontal
+
+# Outcome
+
+
+- ## + Greater certainty
+- ## + Business logic clarity
+- ## + Room for growth
+
+
+- ## - Contexting switching
+- ## - Additional technology
+- ## - Type parity maintenance
+
+---
+# When I rule...
+
+---
+### It totally exists!
+# GenType
+
+---
+# Future
+```notes
+Future is about minimising/maximising for you
+```
+---
+# Frontend isn't moving 
+# _FAST ENOUGH_
+---
+export default SplitThird
+
+#  Conclusions
+
+- ### Types will be ever more important
+- ### Keep strict tabs on costs
+- ### Focus pathologically on people
+- ### Never let mediocrity swallow you
+```notes
+Assume zero knowledge but infinitie intelligence
+people are the hardest, we expect more
+```
+---
+# Nested
+## _nested.com_
+---
+# Thank you!
+
+# @MarcelCutts
